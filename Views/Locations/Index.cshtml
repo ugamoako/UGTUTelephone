@@ -1,0 +1,168 @@
+﻿@model IEnumerable<UGTUTelephone.Location>
+
+@{
+    ViewBag.Title = "Index";
+}
+<style>
+    #container {
+            color: black;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            background-color: white;
+            border-color: #0f5173;
+        }
+</style>
+<script>
+
+       
+            
+        //Authentic Code........
+
+        $(document).ready(function () {
+            //var url = "";
+            $("#dialog-alert").dialog({
+                autoOpen: false,
+                resizable: false,
+                height: 170,
+                width: 400,
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                },
+                buttons: {
+                    "OK": function () {
+                        $(this).dialog("close");
+
+                    }
+                    //"Cancel": function () {
+                    //    $(this).dialog("close");
+                    //}
+                }
+            });
+
+            @*if ('@TempData["msg"]' != "") {
+                $("#dialog-alert").dialog('open');
+            }*@
+
+            $("#dialog-edit").dialog({
+                //title: 'Create User',
+                autoOpen: false,
+                resizable: false,
+                width: 400,
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                },
+                //position: {
+                //    my: 'center',
+                //    at: 'center',
+                //    //of: '#container'
+                //}
+            });
+
+
+            $(".lnkEdit").on("click", function (e) {
+               // e.preventDefault(); //use this or return false;
+                url = $(this).attr('href');
+                $(".ui-dialog-title").html("обновление");
+                $("#dialog-edit").dialog('open');
+
+                return false;
+            });
+
+            $(".lnkalert").on("click", function (e) {
+                // e.preventDefault(); //use this or return false;
+                url = $(this).attr('href');
+                $(".ui-dialog-title").html("обновление");
+                $("#dialog-alert").dialog('open');
+
+                return false;
+            });
+
+            $(document).on("click", "#btncancel", function (e) {
+                $("#dialog-edit").dialog("close");
+                return false;
+            });
+        });
+
+
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip().tooltip('show');
+
+          });
+    
+
+</script>
+
+@*<h2>Index</h2>*@
+<div id="dialog-edit" style="display: none">
+    <div id="loading">
+        <h2>Loading...</h2>
+        <h3>Please wait a few seconds.</h3>
+
+    </div>
+</div>
+<div id="dialog">
+
+</div>
+<div id="container" style="position:relative; border:1px black solid; box-shadow: 5px 5px 4px -4px #00529B; padding-top:1px">
+    
+        
+            
+            @*@Html.ActionLink("Create New", "Create")*@
+
+    <table class="table">
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Adress)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Long)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Lat)
+            </th>
+            <th>
+                <a href="Create" class="lnkEdit">
+                    <span class="Button glyphicon glyphicon-plus-sign"></span>
+                </a>
+            </th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Title)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Adress)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Long)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Lat)
+                </td>
+                <td>
+                    <a href="Edit/@item.LocationID" class="lnkEdit">
+                        <span class="Button glyphicon glyphicon-pencil"></span>
+                    </a>
+                   
+                  
+                </td>
+            </tr>
+        }
+
+    </table>
+</div>

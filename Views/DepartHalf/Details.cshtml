@@ -1,0 +1,122 @@
+﻿@model UGTUTelephone.Dep
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Dep</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.idDepartmentType)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idDepartmentType)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.KadrID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.KadrID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.dateExit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.dateExit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idManagerPlanStaff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idManagerPlanStaff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idEndPrikaz)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idEndPrikaz)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SeverKoeff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SeverKoeff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RayonKoeff)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RayonKoeff)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentGUID)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentGUID)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idFundingCenter)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idFundingCenter)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepartmentIndex)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepartmentIndex)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DepPhoneNumber)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DepPhoneNumber)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.HasTimeSheet)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.HasTimeSheet)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.idOKVED)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.idOKVED)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

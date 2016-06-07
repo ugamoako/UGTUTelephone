@@ -1,0 +1,105 @@
+﻿@model IEnumerable<UGTUTelephone.Dep>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.idDepartmentType)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.KadrID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.dateExit)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idManagerPlanStaff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idEndPrikaz)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.SeverKoeff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RayonKoeff)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentGUID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idFundingCenter)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepartmentIndex)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DepPhoneNumber)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.HasTimeSheet)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.idOKVED)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.idDepartmentType)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.KadrID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.dateExit)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idManagerPlanStaff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idEndPrikaz)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.SeverKoeff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RayonKoeff)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentGUID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idFundingCenter)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepartmentIndex)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DepPhoneNumber)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.HasTimeSheet)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.idOKVED)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.id }) |
+            @Html.ActionLink("Details", "Details", new { id=item.id }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.id })
+        </td>
+    </tr>
+}
+
+</table>

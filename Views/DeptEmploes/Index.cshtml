@@ -1,0 +1,271 @@
+﻿@model IEnumerable<UGTUTelephone.DeptEmplo>
+
+@{
+    ViewBag.Title = "Найти записи";
+}
+
+<body>
+    @*<script src="~/Scripts/Transliterate.js"></script>*@ 
+    <script>
+        $(document).ready(function () {
+            //var url = "";
+            $("#dialog-alert").dialog({
+                autoOpen: false,
+                resizable: false,
+                height: 170,
+                width: 400,
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                },
+                buttons: {
+                    "OK": function () {
+                        $(this).dialog("close");
+
+                    }
+                    //"Cancel": function () {
+                    //    $(this).dialog("close");
+                    //}
+                }
+            });
+
+            @*if ('@TempData["msg"]' != "") {
+                $("#dialog-alert").dialog('open');
+            }*@
+
+            $("#dialog-edit").dialog({
+                //title: 'Create User',
+                autoOpen: false,
+                resizable: false,
+                width: 400,
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                },
+                position: {
+                    my: 'center',
+                    at: 'center',
+                    //of: '#container'
+                }
+            });
+
+
+            $(".lnkEdit").on("click", function (e) {
+               // e.preventDefault(); //use this or return false;
+                url = $(this).attr('href');
+                $(".ui-dialog-title").html("обновление телефона");
+                $("#dialog-edit").dialog('open');
+
+                return false;
+            });
+
+            $(".lnkalert").on("click", function (e) {
+                // e.preventDefault(); //use this or return false;
+                url = $(this).attr('href');
+                $(".ui-dialog-title").html("обновление");
+                $("#dialog-alert").dialog('open');
+
+                return false;
+            });
+
+            $(document).on("click", "#btncancel", function (e) {
+                $("#dialog-edit").dialog("close");
+                return false;
+            });
+        });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip()
+        })
+
+
+        $('#tooltip').tooltip(options)
+
+        var x = new Translit("#output")
+        document.getElementById("output").innerHTML = x;
+
+    </script>
+   
+     <style>
+        .table-striped > tbody > tr:nth-child(odd) > td {
+            /*.table-striped>tbody>tr:nth-child(odd)>th*/
+             /*color: #00529B;
+             background-color: #BDE5F8;*/
+
+
+        }
+
+        .table > tbody > tr > td {
+            padding-left: 20px;
+        }
+
+        .table > tbody > tr > th {
+            background-color: #86afb5;
+        }
+
+        #container {
+            color: black;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            border-radius: 5px;
+            background-color: white;
+            border-color: #0f5173;
+        }
+
+   #loading {
+            display: none;
+            width: 100px;
+            height: 100px;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            text-align: center;
+            margin-left: -50px;
+            margin-top: -100px;
+            z-index: 2;
+            overflow: auto;
+        }
+  #dialog {
+        padding: 0;
+        margin: 0;
+    }
+
+    #dialog-edit {
+        padding: 0;
+        margin: 0;
+    }
+    </style>
+   
+</body>
+
+
+@*<button type="button" class="btn bg-info sm" onclick="location.href='@Url.Action("Simple", "TreeVw")'"></button>*@
+    
+<a href="~/TreeVw/Simple"><span class="glyphicon glyphicon-backward"></span></a>
+
+ 
+@*@using (Html.BeginForm("ExportData", "DeptEmploes", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tr><td></td><td><input type="submit" name="Export" id="Export" value="Export" /></td></tr>
+
+    </table>
+}*@
+<br/>
+
+<div id="container" style="position:relative; border:1px black solid; box-shadow: 5px 5px 4px -4px #00529B; padding-top:1px">
+
+    <table class="table table-condensed">
+        <tr>
+            @*<th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>*@
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+               @*<td>
+                   @item.ID
+               </td>*@
+                <td>
+                    <span style="color:#00529B">@Html.DisplayFor(modelItem => item.Department)</span>&nbsp;&nbsp;&nbsp;&nbsp;@Html.DisplayFor(modelItem => item.DepartmentName) &nbsp;&nbsp;&nbsp;&nbsp; <span style="color:#ef0d0d"> @Html.DisplayFor(modelItem => item.Employee)</span>
+                </td>
+                <td>
+                    @if (item.IP_Phone != null)
+                    {
+                        <span class="glyphicon glyphicon-phone-alt tooltiptext">.@item.IP_Phone</span>
+                    }
+                </td>
+                <td>
+                    @if (item.Phone != null)
+                    {
+                        <span class="glyphicon glyphicon-earphone">.@item.Phone</span>
+                    }
+                </td>
+
+                <td>
+                    @if (item.Email != null)
+                    {
+                        <span class="glyphicon glyphicon-envelope">.@item.Email</span>
+                    }
+                    else
+                    {
+                        if (item.Employee != null && Session["Privilige"] == null)
+                        {
+                                <span class="glyphicon glyphicon-envelope text-success tooltiptext" data-toggle="tooltip" title="предполагаемый электронной почты адрес" style="padding-left:5px; text-align:center"></span>@item.EstimatedEmail.Email
+                            
+                            /**/
+                            @*<span id="output" onclick="Translit();" class="glyphicon glyphicon-envelope">@item.Employee</span><span class="glyphicon glyphicon-question-sign tooltiptext" data-toggle="tooltip" title="this email is calculated"></span>
+                            <script src="~/Scripts/Transliterate.js"></script>*@
+                        }
+                    }
+
+                </td>
+
+
+
+                <td>
+                    @if (item.Address != null)
+                    {
+                        <span class="glyphicon glyphicon-home">.@item.Address</span>
+                    }
+
+                </td>
+                <td>
+                    <a href="~/Home/GetAddress?msg=@item.Lat&msg2=@item.DepartmentName"><span class="glyphicon glyphicon-map-marker"></span></a>
+                </td>
+               
+                @if (Session["Privilige"] != null)
+                {
+                    <td>
+                        @if (@item.ContactsIDFK == null)
+                        {
+                            if (item.idDepartment == null)
+                            {
+                                <a href="~/Contacts/Create?idd=@item.ID&isdp=0" class="lnkEdit">
+                                    <span class="Button glyphicon glyphicon-plus"></span>
+                                </a>
+                            }
+                            else
+                            {
+                            <a href="~/Contacts/Create?idd=@item.idDepartment&isdp=1" class="lnkEdit">
+                                <span class="Button glyphicon glyphicon-plus"></span>
+                            </a>
+                            }
+                        }
+                        else
+                        {
+                        <a href="Edit/@item.ID" class="lnkEdit">
+                            <span class="Button glyphicon glyphicon-pencil"></span>
+                        </a>
+                        }
+                    </td>
+                }
+            </tr>
+        }
+
+    </table>
+    <div id="dialog-alert" style="display: none">
+    </div>
+    <div id="dialog-edit" style="display: none">
+        <div id="loading">
+            <h2>Loading...</h2>
+            <h3>Please wait a few seconds.</h3>
+
+        </div>
+    </div>
+    <div id="dialog">
+
+    </div>
+
+</div>

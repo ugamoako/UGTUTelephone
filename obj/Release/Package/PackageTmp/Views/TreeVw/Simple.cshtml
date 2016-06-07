@@ -1,0 +1,177 @@
+﻿@model List<UGTUTelephone.DeptEmplo>
+
+@{
+    ViewBag.Title = "УГТУ";
+
+   
+}
+@*<link href="~/Content/Site.css" rel="stylesheet"/>
+<script src="//code.jquery.com/jquery-1.10.2.js"></script>*@
+
+<style>
+    /*Here We will add some css for style our treeview*/
+    .collapse {
+        width: 15px;
+        background-image: url('../../Image/ui-icons_454545_256x240.png');
+        background-repeat: no-repeat;
+        background-position: -36px -17px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .expand {
+        width: 15px;
+        background-image: url('../../Image/ui-icons_454545_256x240.png');
+        background-repeat: no-repeat;
+        background-position: -50px -17px;
+        display: inline-block;
+        cursor: pointer;
+    }
+
+    .treeview ul {
+        font: 14px Arial, Sans-Serif;
+        margin: 0px;
+        padding-left: 20px;
+        list-style: none;
+    }
+
+    .treeview > li > a {
+        font-weight: bold;
+    }
+
+    .treeview li ul li a{
+            padding: 4px;
+            font-size: 10px;
+            display: inline-block;
+            text-decoration: none;
+            width: auto;
+            color:#ff0000;
+    }
+
+        .treeview li a {
+            padding: 4px;
+            font-size: 14px;
+            display: inline-block;
+            text-decoration: none;
+            width: auto;
+        }
+
+    #dialog {
+        padding: 0;
+        margin: 0;
+    }
+   
+    #dialog-edit {
+        padding: 0;
+        margin: 0;
+    }
+    #tip{
+    visibility: visible;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+ 
+</style>
+
+
+<body>
+    <div id="container">
+        <div class="dropdown">
+            <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">
+                Экспорт в Excel
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu">
+                <li><a href="/DeptEmploes/Excel?IsChecked=2">Все записи</a></li>
+                <li><a href="/DeptEmploes/Excel?IsChecked=1">Только имеющие телефоны</a></li>
+                @*<li><a href="#">JavaScript</a></li>*@
+            </ul>
+        </div>
+    </div>
+</body>
+
+<div class="treeview">
+    @if (Model != null && Model.Count() > 0)
+            {
+        <ul>
+            @TreeVw.GetTreeVw(Model, Model.FirstOrDefault().idDepartment.GetValueOrDefault())
+        </ul>
+    }
+</div>
+<div id="dialog-alert" style="display: none">
+</div>
+<div id="dialog-edit" style="display: none">
+    <div id="loading">
+        <h2>Loading...</h2>
+        <h3>Please wait a few seconds.</h3>
+
+    </div>
+</div>
+<div id="dialog">
+
+</div>
+
+
+
+
+
+@section Scripts{
+
+    <script>
+        $(document).ready(function () {
+            $(".treeview li>ul").css('display', 'none'); // Hide all 2-level ul
+            $(".collapsible").click(function (e) {
+                e.preventDefault();
+                $(this).toggleClass("collapse expand");
+                $(this).closest('li').children('ul').slideToggle();
+            });
+
+
+        });
+        $(document).ready(function () {
+            $(".dropdown-toggle").dropdown();
+        });
+        $(document).on('click', '.dropdown-menu li', function (event) {
+
+            var $target = $(event.currentTarget);
+            $(this).load(url);
+            //alert($target.text())
+            // $("#phi").val($target.val());
+            //$("#lat").val($target.val());
+            $target.closest('.btn-group')
+               .find('[data-bind="label"]').text($target.text())
+                  .end()
+               .children('.dropdown-toggle').dropdown('toggle');
+
+            return false;
+
+        });
+
+        $(function () {
+            $('[data-toggle="tooltip"]').tooltip().tooltip('show')
+        })
+        $('#tooltip').tooltip(options)
+
+        $(document).ready(function () {
+        $(".btn").click(function () {
+            $("#demo").collapse('toggle');
+            });
+        });
+
+    </script>
+}
+
+
+
+
+
+

@@ -1,0 +1,251 @@
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\ApplicationInsights.config
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\csc.exe
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\vbc.exe
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\VBCSCompiler.exe
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\UGTUTelephone.dll.config
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\UGTUTelephone.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\UGTUTelephone.pdb
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Antlr3.Runtime.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\EntityFramework.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\EntityFramework.SqlServer.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.Web.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.ApplicationInsights.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Newtonsoft.Json.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Owin.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Helpers.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Mvc.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Optimization.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Razor.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Deployment.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Razor.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\WebGrease.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.Web.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.ApplicationInsights.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Helpers.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Mvc.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Optimization.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.Razor.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Deployment.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Razor.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Antlr3.Runtime.pdb
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Newtonsoft.Json.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\EntityFramework.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\EntityFramework.SqlServer.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\obj\Release\UGTUTelephone.dll
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\obj\Release\UGTUTelephone.pdb
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Content\jquery-ui-1.10.4.custom.min.css
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Content\Site.css
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\accent.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\bullet.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\logo_ugtu_ru.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList0.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList1.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList2.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList3.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList4.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList5.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList6.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList7.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList8.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\orderedList9.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\ui-icons_454545_256x240.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\ai.0.15.0-build58334.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\ai.0.15.0-build58334.min.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\bootstrap.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\bootstrap.min.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.min.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.min.map
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-ui-1.11.4.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-ui-1.11.4.min.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.min.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.unobtrusive.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.unobtrusive.min.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\modernizr-2.6.2.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\respond.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\respond.min.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\_references.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.intellisense.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate-vsdoc.js
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\bin\Image\heroAccent.png
+C:\Users\amoako\Documents\Visual Studio 2015\Projects\UGTUTelephone\UGTUTelephone\obj\Release\UGTUTelephone.csprojResolveAssemblyReference.cache
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\SqlServerTypes\x64\msvcr100.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\SqlServerTypes\x64\SqlServerSpatial110.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\SqlServerTypes\x86\msvcr100.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\SqlServerTypes\x86\SqlServerSpatial110.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Content\jquery-ui-1.10.4.custom.min.css
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Content\Site.css
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\accent.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\bullet.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\logo_ugtu_ru.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList0.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList1.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList2.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList3.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList4.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList5.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList6.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList7.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList8.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\orderedList9.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\ui-icons_454545_256x240.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\ai.0.15.0-build58334.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\ai.0.15.0-build58334.min.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\ApplicationInsights.config
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\bootstrap.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\bootstrap.min.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.min.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.min.map
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-ui-1.11.4.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-ui-1.11.4.min.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.min.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.unobtrusive.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate.unobtrusive.min.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\modernizr-2.6.2.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\respond.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\respond.min.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\_references.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\csc.exe
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CodeAnalysis.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CodeAnalysis.VisualBasic.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.CSharp.Core.targets
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\Microsoft.VisualBasic.Core.targets
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\System.Collections.Immutable.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\System.Reflection.Metadata.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\vbc.exe
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\VBCSCompiler.exe
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\roslyn\VBCSCompiler.exe.config
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery-2.2.0.intellisense.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Scripts\jquery.validate-vsdoc.js
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Image\heroAccent.png
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\UGTUTelephone.dll.config
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\UGTUTelephone.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\UGTUTelephone.pdb
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\AjaxControlToolkit.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Antlr3.Runtime.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\AspNet.ScriptManager.jQuery.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\EntityFramework.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\EntityFramework.SqlServer.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Grid.Mvc.Ajax.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\GridMvc.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Jmelosegui.Mvc.GoogleMap.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.Agent.Intercept.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.DependencyCollector.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.PerfCounterCollector.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.ServerTelemetryChannel.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.Web.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.WindowsServer.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.ApplicationInsights.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Core.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.EntityFramework.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Owin.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Host.SystemWeb.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Cookies.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Facebook.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Google.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.MicrosoftAccount.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.OAuth.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Twitter.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.SqlServer.Types.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Newtonsoft.Json.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Owin.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Helpers.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Mvc.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Optimization.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Razor.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Deployment.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Razor.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\WebActivatorEx.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\WebGrease.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.DependencyCollector.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.ServerTelemetryChannel.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.Web.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AI.WindowsServer.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.ApplicationInsights.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Newtonsoft.Json.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Helpers.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Mvc.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Optimization.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.Razor.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Deployment.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\System.Web.WebPages.Razor.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Antlr3.Runtime.pdb
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\EntityFramework.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\EntityFramework.SqlServer.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Core.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.Owin.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.AspNet.Identity.EntityFramework.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Facebook.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Cookies.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.OAuth.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Google.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.Twitter.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\obj\Release\UGTUTelephone.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\obj\Release\UGTUTelephone.pdb
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\ClosedXML.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\DocumentFormat.OpenXml.dll
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\bin\ClosedXML.xml
+C:\Users\amoako\Documents\UGTUTelephone\UGTUTelephone\obj\Release\UGTUTelephone.csprojResolveAssemblyReference.cache

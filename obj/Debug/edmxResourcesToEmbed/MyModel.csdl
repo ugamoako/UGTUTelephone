@@ -1,0 +1,81 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KadrRealTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Privilige" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityContainer Name="KadrRealTestEntities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Logins" EntityType="Self.Login" />
+    <EntitySet Name="DepContacts" EntityType="KadrRealTestModel.DepContact" />
+    <EntitySet Name="DeptEmploes" EntityType="KadrRealTestModel.DeptEmplo" />
+    <EntitySet Name="Locations" EntityType="KadrRealTestModel.Location" />
+    <AssociationSet Name="FK_DepContacts_CorpusAddress" Association="KadrRealTestModel.FK_DepContacts_CorpusAddress">
+      <End Role="Location" EntitySet="Locations" />
+      <End Role="DepContact" EntitySet="DepContacts" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DepContact">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IP_Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Lat" Type="Int32" />
+    <Property Name="Long" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Rank" Type="Decimal" Precision="18" Scale="0" />
+    <NavigationProperty Name="Location" Relationship="KadrRealTestModel.FK_DepContacts_CorpusAddress" FromRole="DepContact" ToRole="Location" />
+    <Property Name="IsDep" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+  </EntityType>
+  <EntityType Name="DeptEmplo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="idDepartment" Type="Int32" />
+    <Property Name="idManagerDepartment" Type="Int32" />
+    <Property Name="DepartmentName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+    <Property Name="Employee" Type="String" MaxLength="152" FixedLength="false" Unicode="false" />
+    <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IP_Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="IsManager" Type="Boolean" />
+    <Property Name="pg" Type="Int32" />
+    <Property Name="Rank" Type="Decimal" Precision="18" Scale="0" />
+    <Property Name="Department" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+    <Property Name="Lat" Type="Int32" />
+    <Property Name="ContactsIDFK" Type="Int32" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+    <Property Name="Long" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="DepContacts" Relationship="KadrRealTestModel.FK_DepContacts_CorpusAddress" FromRole="Location" ToRole="DepContact" />
+  </EntityType>
+  <Association Name="FK_DepContacts_CorpusAddress">
+    <End Type="KadrRealTestModel.Location" Role="Location" Multiplicity="0..1" />
+    <End Type="KadrRealTestModel.DepContact" Role="DepContact" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="DepContact">
+        <PropertyRef Name="Lat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

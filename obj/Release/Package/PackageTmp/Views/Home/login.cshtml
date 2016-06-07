@@ -1,0 +1,85 @@
+﻿@model UGTUTelephone.Login
+
+@{
+    ViewBag.Title = "вход";
+}
+
+@*<h2>@ViewBag.Title.</h2>*@
+<div class="form-horizontal ">
+    <div class="col-md-8">
+        <section id="loginForm">
+            @using (Html.BeginForm("login", "Home", FormMethod.Post))
+            {
+
+                @Html.AntiForgeryToken()
+                <h4>введите свои данные для входа</h4>
+                <hr />
+                @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+                if (@ViewBag.message != null)
+                {
+                    <div style="border: 1px solid red">
+                        @ViewBag.message
+                    </div>
+                }
+                <div class="form-group">
+                    @Html.Label("Логин", new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.TextBoxFor(m => m.Username, new { @class = "form-control long-text" })
+                        @Html.ValidationMessageFor(m => m.Username, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    @Html.Label("Пароль", new { @class = "col-md-2 control-label" })
+                    <div class="col-md-10">
+                        @Html.PasswordFor(m => m.Password, new { @class = "form-control long-text" })
+                        @Html.ValidationMessageFor(m => m.Password, "", new { @class = "text-danger" })
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-offset-2 col-md-10">
+                        <div class="checkbox">
+                            @*@Html.CheckBoxFor(m => m.RememberMe)
+                                @Html.LabelFor(m => m.RememberMe)*@
+                        </div>
+                    </div>
+                </div>
+                <div class="input-group col-md-offset-2 col-md-10">
+                    
+                        <div class="col-lg-4 col-md-5">
+                            <button type="submit" class="btn btn-primary btn-sm">
+                                <span class="glyphicon glyphicon-log-in glyphicon-align-left" aria-hidden="true"></span> Войти
+                            </button>
+                            @*<input type="submit" value="Войти" class="btn btn-primary btn-sm" />*@
+                        </div>
+                    
+                    
+                        <div class="col-lg-4 col-md-5">
+                            <button onclick="location.href='@Url.Action("Simple", "TreeVw")';return false;" class="btn btn-danger btn-sm">
+                                <span class="glyphicon glyphicon-log-out glyphicon-align-left" aria-hidden="true"></span> Отмена
+                                    @*<a href="@Url.Action("Simple", "TreeVw")" class="btn btn-danger btn-sm">Отмена</a>*@
+                                
+                            </button>
+                        </div>
+                    
+                </div>
+                  <p>
+                    @*@Html.ActionLink("Register as a new user", "UserReg")*@
+                </p>
+                @* Enable this once you have account confirmation enabled for password reset functionality
+                    <p>
+                        @Html.ActionLink("Forgot your password?", "ForgotPassword")
+                    </p>*@
+            }
+        </section>
+    </div>
+
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+

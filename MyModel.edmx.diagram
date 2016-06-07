@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="559931a091204059a81264894e754695" Name="Diagram1" ZoomLevel="78">
+        <EntityTypeShape EntityType="KadrRealTestModel.Login" Width="1.5" PointX="3.375" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="KadrRealTestModel.DepContact" Width="1.5" PointX="5.25" PointY="0.625" />
+        <EntityTypeShape EntityType="KadrRealTestModel.DeptEmplo" Width="2.125" PointX="8.25" PointY="2.375" />
+        <EntityTypeShape EntityType="KadrRealTestModel.Location" Width="1.5" PointX="3" PointY="3" />
+        <AssociationConnector Association="KadrRealTestModel.FK_DepContacts_CorpusAddress" />
+        </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

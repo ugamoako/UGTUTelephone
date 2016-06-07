@@ -1,0 +1,70 @@
+﻿@using System;
+@using System.Web;
+@using System.Web.Mvc;
+@using System.Web.Mvc.Html;
+
+@helper GetTreeVw(List<UGTUTelephone.DeptEmplo> siteMenu, int parentID)
+{
+   
+
+
+foreach (var i in siteMenu.Where(a => a.idManagerDepartment == parentID)
+    .OrderByDescending(a => a.Rank).ThenByDescending(a => a.IsManager).ThenBy(a => a.pg).ThenBy(a => a.DepartmentName).ThenBy(a => a.Employee))
+{
+        <li>
+            <div class="row" style="color:black;border-radius:6px;position: relative; font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; font-weight:bold; text-transform:none">
+                @{ var submenu = siteMenu.Where(a => a.idManagerDepartment == i.idDepartment && i.idDepartment !=null).Count();
+                    
+                 }
+
+                @if (submenu > 0)
+                {
+                    <span class="collapse collapsible">&nbsp;</span>
+                }
+                else
+                {
+                    <span style="width:15px; display:inline-block">&nbsp;</span>
+                }
+
+               
+
+               
+                    @i.DepartmentName  <span style="color:#a0062c"> @i.Employee</span>&nbsp;&nbsp;
+                   
+                    @if (@i.IP_Phone != null)
+                    {
+                    <span class="glyphicon glyphicon-phone-alt"style="color:green">.@i.IP_Phone</span>
+                    }
+                &nbsp;&nbsp;
+                    @if (i.Phone != null)
+                    {
+                    <span class="glyphicon glyphicon-earphone"style="color:green">.@i.Phone</span>
+                    }
+                    <a href="~/Home/GetAddress?msg=@i.Lat&msg2=@i.DepartmentName"><span class="glyphicon glyphicon-map-marker"></span></a>
+                
+                    @* class="lnkEdit"<div id="man" style="background-color: black;color: #fff; text-align:center;border-radius:6px;position: absolute;">IP:@i.IP_Phone Тел:@i.Phone Почта:@i.Email</div>*@
+
+                </div>
+                        @*@foreach (var z in siteMenu.Where(x => x.idDep == i.idDepartment && x.Phone != null).OrderBy(x => x.idDep))
+                        {
+                            <ul>
+                                &nbsp;&nbsp;&nbsp;&nbsp;@z.Post - @z.Employee
+                            </ul>
+                        }*@
+                
+                
+                       
+                @if (submenu > 0)
+                {
+                    <ul>
+                        @TreeVw.GetTreeVw(siteMenu, i.idDepartment.GetValueOrDefault())
+                        @* Recursive  Call for Populate Sub items here*@
+                    </ul>
+                }
+              
+
+
+        </li>
+        
+                }
+}

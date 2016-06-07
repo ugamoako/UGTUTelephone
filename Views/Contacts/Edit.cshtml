@@ -1,0 +1,156 @@
+﻿@{
+    Layout = "";
+}
+@model UGTUTelephone.DepContact
+
+
+@{
+    ViewBag.Title = "Изменить";
+}
+
+@*<h2>Edit</h2>*@
+<script src="~/Scripts/jquery.validate.min.js"></script>
+<script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
+
+<style>
+    input,
+    select,
+    textarea {
+        max-width: 200px;
+    }
+
+.btn-input {
+   display: block;
+}
+ 
+.btn-input .btn.form-control {
+    text-align: left;
+}
+ 
+.btn-input .btn.form-control span:first-child {
+   left: 10px;
+   overflow-y: auto;
+   position: absolute;
+   right: 25px;
+}
+ 
+.btn-input .btn.form-control .caret {
+   margin-top: -1px;
+   position: absolute;
+   right: 10px;
+   top: 50%;
+}
+#gh {
+    height: 70px;
+    overflow-y:auto;
+}
+.hidden {
+    display: none;
+}
+</style>
+<script src="~/Scripts/locality.js"></script>
+@*<script>*@
+    <script>
+
+</script>
+  
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    
+    <div class="form-horizontal">
+        @*<h4>DepContact</h4>
+        <hr />*@
+        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        @Html.HiddenFor(model => model.ID)
+
+       
+        <div class="form-group">
+            @Html.Label("IP:", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.IP_Phone, new {@class ="form-control", @id="ipi"})
+                @Html.ValidationMessageFor(model => model.IP_Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+        @*Enter your name: <input type="text" id="mywork">*@
+        <div class="form-group">
+
+            @Html.Label("Телефон:", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.TextBoxFor(model => model.Phone, new { @class = "form-control", @id ="phi" })
+                @Html.TextBoxFor(model => model.Lat, new { @class = "hidden", @id = "lat" })
+                @Html.ValidationMessageFor(model => model.Phone, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Почта:", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("Кабинет:", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="col-md-10">
+                @Html.EditorFor(model => model.Address, new { htmlAttributes = new { @class = "form-control" } })
+                @Html.ValidationMessageFor(model => model.Address, "", new { @class = "text-danger" })
+            </div>
+        </div>
+
+        <div class="form-group">
+            @Html.Label("место:", htmlAttributes: new { @class = "control-label col-md-2" })
+            <div class="btn-group btn-input clearfix col-md-10">
+                <button type="button" class="btn btn-default dropdown-toggle form-control" data-toggle="dropdown" onload="loadImage()">
+                    <span data-bind="label" id="output"></span> <span class="caret"></span>
+                </button>               
+                    <ul id="gh"  class="dropdown-menu" role="menu">
+                        <li value="1"><a href="#">Корпус A,Б,B,Г</a></li>
+                        <li value="2"><a href="#">Корпус E</a></li>
+                        <li value="3"><a href="#">Корпус Д</a></li>
+                        <li value="4"><a href="#">Корпус К</a></li>
+                        <li value="5"><a href="#">Корпус Л</a></li>
+                        <li value="6"><a href="#">Корпус Н</a></li>
+                        <li value="7"><a href="#">Корпус П</a></li>
+                        <li value="8"><a href="#">СК (Буревестник)</a></li>
+                        <li value="9"><a href="#">Общежитие №1</a></li>
+                        <li value="10"><a href="#">Общежитие №2</a></li>
+                        <li value="11"><a href="#">Общежитие №3</a></li>
+                        <li value="12"><a href="#">Общежитие №4</a></li>
+                        <li value="13"><a href="#">Общежитие №5</a></li>
+                        <li value="14"><a href="#">Общежитие №6</a></li>
+                        <li value="15"><a href="#">Общежитие №7</a></li>
+                        <li value="16"><a href="#">Общежитие №8</a></li>
+                        <li value="17"><a href="#">Общежитие №9</a></li>
+                        <li value="18"><a href="#">Общежитие №10</a></li>
+                        <li value="19"><a href="#">Общежитие №12</a></li>
+                        <li value="20"><a href="#">Общежитие №13</a></li>
+                        <li value="21"><a href="#">Общежитие №14</a></li>
+                       
+                    </ul>             
+            </div>
+        </div>
+      
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <p>
+                        <input type="submit" value="Save" class="btn btn-primary btn-sm" />
+                        &nbsp;&nbsp;<input type="submit" value="Cancel" id="btncancel" class="btn btn-danger btn-sm" />
+                    </p>
+                </div>
+            </div>
+        </div>
+}
+
+@*<div>
+    @Html.ActionLink("назад", "Index")
+</div>*@
+
+@section Scripts {
+    
+    @Scripts.Render("~/bundles/jqueryval")
+
+ 
+}

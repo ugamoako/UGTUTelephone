@@ -1,0 +1,274 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+    <Schema Namespace="KadrRealTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="DepContacts">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="IP_Phone" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Lat" Type="int" />
+          <Property Name="Long" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Rank" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="IsDep" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationID" />
+          </Key>
+          <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Title" Type="nvarchar" MaxLength="200" />
+          <Property Name="Adress" Type="nvarchar" MaxLength="200" />
+          <Property Name="Long" Type="varchar" MaxLength="50" />
+          <Property Name="Lat" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FullName" Type="varchar" MaxLength="100" Nullable="false" />
+          <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Privilige" Type="varchar" MaxLength="50" />
+        </EntityType>
+        <!--Errors Found During Generation:
+warning 6002: The table/view 'KadrRealTest.dbo.DeptEmplo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+        <EntityType Name="DeptEmplo">
+          <Key>
+            <PropertyRef Name="ID" />
+            
+          </Key>
+          <Property Name="ID" Type="int" Nullable="false" />
+          <Property Name="idDepartment" Type="int" />
+          <Property Name="idManagerDepartment" Type="int" />
+          <Property Name="DepartmentName" Type="varchar" MaxLength="500" Nullable="false" />
+          <Property Name="IsManager" Type="bit" />
+          <Property Name="pg" Type="int" />
+          <Property Name="Employee" Type="varchar" MaxLength="152" />
+          <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+          <Property Name="IP_Phone" Type="nvarchar" MaxLength="10" />
+          <Property Name="Email" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="200" />
+          <Property Name="Rank" Type="decimal" Precision="18" Scale="0" />
+          <Property Name="Department" Type="varchar" MaxLength="500" />
+          <Property Name="Lat" Type="int" />
+          <Property Name="ContactsIDFK" Type="int" />
+        </EntityType>
+        <Association Name="FK_DepContacts_CorpusAddress">
+          <End Role="Location" Type="Self.Location" Multiplicity="0..1" />
+          <End Role="DepContacts" Type="Self.DepContacts" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="LocationID" />
+            </Principal>
+            <Dependent Role="DepContacts">
+              <PropertyRef Name="Lat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="KadrRealTestModelStoreContainer">
+          <EntitySet Name="DepContacts" EntityType="Self.DepContacts" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="DeptEmplo" EntityType="Self.DeptEmplo" store:Type="Views" store:Schema="dbo">
+            <DefiningQuery>SELECT 
+    [DeptEmplo].[ID] AS [ID], 
+    [DeptEmplo].[idDepartment] AS [idDepartment], 
+    [DeptEmplo].[idManagerDepartment] AS [idManagerDepartment], 
+    [DeptEmplo].[DepartmentName] AS [DepartmentName], 
+    [DeptEmplo].[IsManager] AS [IsManager], 
+    [DeptEmplo].[pg] AS [pg], 
+    [DeptEmplo].[Employee] AS [Employee], 
+    [DeptEmplo].[Phone] AS [Phone], 
+    [DeptEmplo].[IP_Phone] AS [IP_Phone], 
+    [DeptEmplo].[Email] AS [Email], 
+    [DeptEmplo].[Address] AS [Address], 
+    [DeptEmplo].[Rank] AS [Rank], 
+    [DeptEmplo].[Department] AS [Department], 
+    [DeptEmplo].[Lat] AS [Lat], 
+    [DeptEmplo].[ContactsIDFK] AS [ContactsIDFK]
+    FROM [dbo].[DeptEmplo] AS [DeptEmplo]</DefiningQuery>
+          </EntitySet>
+          <AssociationSet Name="FK_DepContacts_CorpusAddress" Association="Self.FK_DepContacts_CorpusAddress">
+            <End Role="Location" EntitySet="Location" />
+            <End Role="DepContacts" EntitySet="DepContacts" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema></edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="KadrRealTestModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Login">
+          <Key>
+            <PropertyRef Name="UserID" />
+          </Key>
+          <Property Name="UserID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FullName" Type="String" MaxLength="100" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Privilige" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityContainer Name="KadrRealTestEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Logins" EntityType="Self.Login" />
+          <EntitySet Name="DepContacts" EntityType="KadrRealTestModel.DepContact" />
+          <EntitySet Name="DeptEmploes" EntityType="KadrRealTestModel.DeptEmplo" />
+          <EntitySet Name="Locations" EntityType="KadrRealTestModel.Location" />
+          <AssociationSet Name="FK_DepContacts_CorpusAddress" Association="KadrRealTestModel.FK_DepContacts_CorpusAddress">
+            <End Role="Location" EntitySet="Locations" />
+            <End Role="DepContact" EntitySet="DepContacts" />
+          </AssociationSet>
+          </EntityContainer>
+        <EntityType Name="DepContact">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IP_Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Lat" Type="Int32" />
+          <Property Name="Long" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Rank" Type="Decimal" Precision="18" Scale="0" />
+          <NavigationProperty Name="Location" Relationship="KadrRealTestModel.FK_DepContacts_CorpusAddress" FromRole="DepContact" ToRole="Location" />
+          <Property Name="IsDep" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          </EntityType>
+        <EntityType Name="DeptEmplo">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" />
+          <Property Name="idDepartment" Type="Int32" />
+          <Property Name="idManagerDepartment" Type="Int32" />
+          <Property Name="DepartmentName" Type="String" MaxLength="500" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Employee" Type="String" MaxLength="152" FixedLength="false" Unicode="false" />
+          <Property Name="Phone" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="IP_Phone" Type="String" MaxLength="10" FixedLength="false" Unicode="true" />
+          <Property Name="Email" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="IsManager" Type="Boolean" />
+          <Property Name="pg" Type="Int32" />
+          <Property Name="Rank" Type="Decimal" Precision="18" Scale="0" />
+          <Property Name="Department" Type="String" MaxLength="500" FixedLength="false" Unicode="false" />
+          <Property Name="Lat" Type="Int32" />
+          <Property Name="ContactsIDFK" Type="Int32" />
+        </EntityType>
+        <EntityType Name="Location">
+          <Key>
+            <PropertyRef Name="LocationID" />
+          </Key>
+          <Property Name="LocationID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Title" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Adress" Type="String" MaxLength="200" FixedLength="false" Unicode="true" />
+          <Property Name="Long" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="Lat" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="DepContacts" Relationship="KadrRealTestModel.FK_DepContacts_CorpusAddress" FromRole="Location" ToRole="DepContact" />
+        </EntityType>
+        <Association Name="FK_DepContacts_CorpusAddress">
+          <End Type="KadrRealTestModel.Location" Role="Location" Multiplicity="0..1" />
+          <End Type="KadrRealTestModel.DepContact" Role="DepContact" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="Location">
+              <PropertyRef Name="LocationID" />
+            </Principal>
+            <Dependent Role="DepContact">
+              <PropertyRef Name="Lat" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="KadrRealTestModelStoreContainer" CdmEntityContainer="KadrRealTestEntities">
+          <EntitySetMapping Name="Logins">
+            <EntityTypeMapping TypeName="KadrRealTestModel.Login">
+              <MappingFragment StoreEntitySet="Login">
+                <ScalarProperty Name="UserID" ColumnName="UserID" />
+                <ScalarProperty Name="FullName" ColumnName="FullName" />
+                <ScalarProperty Name="Username" ColumnName="Username" />
+                <ScalarProperty Name="Password" ColumnName="Password" />
+                <ScalarProperty Name="Privilige" ColumnName="Privilige" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DepContacts">
+            <EntityTypeMapping TypeName="KadrRealTestModel.DepContact">
+              <MappingFragment StoreEntitySet="DepContacts">
+                <ScalarProperty Name="IsDep" ColumnName="IsDep" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IP_Phone" ColumnName="IP_Phone" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="DeptEmploes">
+            <EntityTypeMapping TypeName="KadrRealTestModel.DeptEmplo">
+              <MappingFragment StoreEntitySet="DeptEmplo">
+                <ScalarProperty Name="ContactsIDFK" ColumnName="ContactsIDFK" />
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Department" ColumnName="Department" />
+                <ScalarProperty Name="Rank" ColumnName="Rank" />
+                <ScalarProperty Name="pg" ColumnName="pg" />
+                <ScalarProperty Name="IsManager" ColumnName="IsManager" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="Email" ColumnName="Email" />
+                <ScalarProperty Name="IP_Phone" ColumnName="IP_Phone" />
+                <ScalarProperty Name="Phone" ColumnName="Phone" />
+                <ScalarProperty Name="Employee" ColumnName="Employee" />
+                <ScalarProperty Name="DepartmentName" ColumnName="DepartmentName" />
+                <ScalarProperty Name="idManagerDepartment" ColumnName="idManagerDepartment" />
+                <ScalarProperty Name="idDepartment" ColumnName="idDepartment" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="Locations">
+            <EntityTypeMapping TypeName="KadrRealTestModel.Location">
+              <MappingFragment StoreEntitySet="Location">
+                <ScalarProperty Name="Lat" ColumnName="Lat" />
+                <ScalarProperty Name="Long" ColumnName="Long" />
+                <ScalarProperty Name="Adress" ColumnName="Adress" />
+                <ScalarProperty Name="Title" ColumnName="Title" />
+                <ScalarProperty Name="LocationID" ColumnName="LocationID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

@@ -1,0 +1,267 @@
+﻿<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+
+        body {
+            position: relative;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 18px;
+            font-weight: lighter;
+            text-transform: capitalize;
+            color: #fff;
+            width: 100%;
+            align-content: center;
+           
+        }
+
+        #body {
+            padding-top: 30px;
+            /*background-color :#ffd800;*/
+        }
+
+        #main {
+            width: 100%;
+            margin-left: 20px auto;
+            height: 100%;
+            position: relative;
+            /*background-color :deepskyblue;*/
+        }
+
+        #menubox {
+            margin-top: 5px;
+            height: 40px;
+            background: #003366;
+            width: 100%;
+        }
+
+        #menu {
+            margin: 0px auto;
+            width: 100%;
+            position: absolute;
+        }
+
+            #menu ul {
+                list-style: none;
+            }
+
+                #menu ul li {
+                    float: left;
+                    position: relative;
+                }
+
+                    #menu ul li a {
+                        text-decoration: none;
+                        display: block;
+                        padding: 14px 50px 14px 50px;
+                        background: #3300CC;
+                        color: #FFFFFF;
+                    }
+
+                        #menu ul li a:hover {
+                            background: #003366;
+                        }
+
+                    #menu ul li ul {
+                        position: absolute;
+                        display: none;
+                        top: 27px;
+                        width: 200px;
+                    }
+
+                        #menu ul li ul li {
+                            position: relative;
+                            float: none;
+                        }
+
+                    #menu ul li.home a {
+                        background: url(homeBg.png)left top no-repeat !important;
+                        padding: 14px 10px;
+                        margin-top: 12px;
+                        height: 34px;
+                        width: 180px;
+                        display: block;
+                    }
+
+                    #menu ul li ul li a {
+                        border-bottom: 1px solid #666666;
+                        background: #b2a9b0;
+                        padding: 14px 10px;
+                    }
+
+                    #menu ul li:hover ul {
+                        display: block;
+                    }
+
+                    #menu ul li.home:hover a {
+                        background: url(home_hover.png) left top no-repeat !important;
+                    }
+
+                    #menu ul li ul li ul {
+                        display: none !important;
+                        left: 195px;
+                        top: 0px;
+                        position: absolute;
+                        margin-left: 13px;
+                    }
+
+                        #menu ul li ul li ul li {
+                            position: relative;
+                        }
+
+                            #menu ul li ul li ul li a {
+                            }
+
+                    #menu ul li ul li.vertical a {
+                        background: url(verticalBg.png) no-repeat !important;
+                        margin-left: -13px;
+                    }
+
+                    #menu ul li ul li:hover ul {
+                        display: block !important;
+                    }
+
+                    #menu ul li ul li.vertical:hover a {
+                        background: url(vertical.png) no-repeat !important;
+                    }
+
+                    #menu ul li ul li ul li ul {
+                        visibility: hidden;
+                        position: absolute;
+                        left: 195px;
+                    }
+
+                    #menu ul li ul li ul li:hover ul {
+                        visibility: visible;
+                    }
+       .modal-content {
+         width: 400px !important;
+         margin: 0 auto !important;
+     }
+    </style>
+
+    <meta charset="utf-8" />
+
+    <title>@ViewBag.Title -Database</title>
+
+    <link href="~/favicon.ico" rel="shortcut icon" type="image/x-icon" />
+
+    <meta name="viewport" content="width=device-width" />
+
+    @Styles.Render("~/Content/css")
+    @Styles.Render("~/Content/themes/base/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @Scripts.Render("~/bundles/jqueryui")
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet"/>
+    <link href="~/Content/themes/base/all.css" rel="stylesheet" />
+    <link href="~/Content/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/themes/base/jquery.ui.all.css" rel="stylesheet" />
+    <script src="~/Scripts/jquery-2.2.0.js"></script>
+    @*<script src="~/Scripts/jquery-2.2.0.min.js"></script>*@
+    <script src="~/Scripts/jquery-ui-1.11.4.js"></script>
+    <script src="~/Scripts/bootstrap.js"></script>
+    @*<script src="~/Scripts/bootstrap.min.js"></script>*@
+    <script src="~/Scripts/myAuto.js"></script>
+    
+    
+
+</head>
+
+<body>
+    <div id="main" class="container">
+        <header>
+
+
+
+            <div class="content-wrapper">
+                <nav class="navbar navbar-custom navbar-fixed-top" role="navigation">
+                    <div class="container-fluid">
+
+                        @*<a class="navbar-brand" href="@Url.Action("Simple", "TreeVw")">*@
+                        <ul class="nav navbar-custom navbar-left">
+                            <li>
+                                <img src="~/Image/logo_ugtu_ru.png" />
+                            </li>
+
+                            @*<span class="glyphicon glyphicon-earphone" aria-hidden="true"></span>*@
+
+
+                        </ul>
+                        @*</a>*@
+                        
+                        <a class="navbar-custom navbar-brand" href="@Url.Action("Simple", "TreeVw")"> Справочник телефонов</a>
+                         <ul class="nav navbar-custom navbar-right">                               
+                            <li>
+                                @Html.Partial("_LoginPartial")
+                            </li>
+                        </ul>
+                        @*<form class="navbar-form navbar-left">*@
+
+                        @using (Html.BeginForm("Index", "DeptEmploes", FormMethod.Get))
+                        {
+                            <div class="row" style="padding-top:10px">
+
+                                <div class="input-group nav navbar-custom col-lg-6">
+                                    <input type="text" name="search" class="form-control" id="txtSearch" placeholder="название подразделения, должность, имя или номер телефона" />
+                                    <span class="input-group-btn">
+                                        <button type="submit" class="btn btn-default">
+                                            <span class="glyphicon glyphicon-search"></span>
+                                        </button>
+                                        <a href="~/Home/Index" class="btn btn-info" role="button">Карта</a>
+                                    </span>
+                               
+                                    
+                                </div>
+                            </div>
+                        }
+                       
+                    </div>
+                </nav>
+                @*<div id="menubox">
+                    </div>*@
+            </div>
+
+        </header>
+        <div id="body" class="body-content col-lg-8 col-lg-offset-2">
+
+
+            @RenderSection("featured", required: false)
+            <section class="content-wrapper main-content clear-fix">
+                @RenderBody()
+
+            </section>
+
+        </div>
+
+        <footer class="col-lg-8 col-lg-offset-2">
+            <hr />
+            <div class="content-wrapper">
+                <div class="float-left">
+                    <p>&copy; @DateTime.Now.Year - УГТУ</p>
+
+                </div>
+
+            </div>
+
+        </footer>
+
+
+
+
+        @*<input id="Name" name="Name" />*@
+        @RenderSection("scripts", required: false)
+    </div>
+</body>
+
+</html>

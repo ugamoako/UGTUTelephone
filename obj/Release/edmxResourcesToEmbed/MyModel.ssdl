@@ -1,0 +1,99 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="KadrRealTestModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="DepContacts">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="IP_Phone" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Lat" Type="int" />
+    <Property Name="Long" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Rank" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="IsDep" Type="char" MaxLength="1" />
+  </EntityType>
+  <EntityType Name="Location">
+    <Key>
+      <PropertyRef Name="LocationID" />
+    </Key>
+    <Property Name="LocationID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Title" Type="nvarchar" MaxLength="200" />
+    <Property Name="Adress" Type="nvarchar" MaxLength="200" />
+    <Property Name="Long" Type="varchar" MaxLength="50" />
+    <Property Name="Lat" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <EntityType Name="Login">
+    <Key>
+      <PropertyRef Name="UserID" />
+    </Key>
+    <Property Name="UserID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FullName" Type="varchar" MaxLength="100" Nullable="false" />
+    <Property Name="Username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Privilige" Type="varchar" MaxLength="50" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6002: The table/view 'KadrRealTest.dbo.DeptEmplo' does not have a primary key defined. The key has been inferred and the definition was created as a read-only table/view.-->
+  <EntityType Name="DeptEmplo">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" Nullable="false" />
+    <Property Name="idDepartment" Type="int" />
+    <Property Name="idManagerDepartment" Type="int" />
+    <Property Name="DepartmentName" Type="varchar" MaxLength="500" Nullable="false" />
+    <Property Name="IsManager" Type="bit" />
+    <Property Name="pg" Type="int" />
+    <Property Name="Employee" Type="varchar" MaxLength="152" />
+    <Property Name="Phone" Type="nvarchar" MaxLength="50" />
+    <Property Name="IP_Phone" Type="nvarchar" MaxLength="10" />
+    <Property Name="Email" Type="nvarchar" MaxLength="50" />
+    <Property Name="Address" Type="nvarchar" MaxLength="200" />
+    <Property Name="Rank" Type="decimal" Precision="18" Scale="0" />
+    <Property Name="Department" Type="varchar" MaxLength="500" />
+    <Property Name="Lat" Type="int" />
+    <Property Name="ContactsIDFK" Type="int" />
+  </EntityType>
+  <Association Name="FK_DepContacts_CorpusAddress">
+    <End Role="Location" Type="Self.Location" Multiplicity="0..1" />
+    <End Role="DepContacts" Type="Self.DepContacts" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Location">
+        <PropertyRef Name="LocationID" />
+      </Principal>
+      <Dependent Role="DepContacts">
+        <PropertyRef Name="Lat" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="KadrRealTestModelStoreContainer">
+    <EntitySet Name="DepContacts" EntityType="Self.DepContacts" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Location" EntityType="Self.Location" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Login" EntityType="Self.Login" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="DeptEmplo" EntityType="Self.DeptEmplo" store:Type="Views" store:Schema="dbo">
+      <DefiningQuery>SELECT 
+    [DeptEmplo].[ID] AS [ID], 
+    [DeptEmplo].[idDepartment] AS [idDepartment], 
+    [DeptEmplo].[idManagerDepartment] AS [idManagerDepartment], 
+    [DeptEmplo].[DepartmentName] AS [DepartmentName], 
+    [DeptEmplo].[IsManager] AS [IsManager], 
+    [DeptEmplo].[pg] AS [pg], 
+    [DeptEmplo].[Employee] AS [Employee], 
+    [DeptEmplo].[Phone] AS [Phone], 
+    [DeptEmplo].[IP_Phone] AS [IP_Phone], 
+    [DeptEmplo].[Email] AS [Email], 
+    [DeptEmplo].[Address] AS [Address], 
+    [DeptEmplo].[Rank] AS [Rank], 
+    [DeptEmplo].[Department] AS [Department], 
+    [DeptEmplo].[Lat] AS [Lat], 
+    [DeptEmplo].[ContactsIDFK] AS [ContactsIDFK]
+    FROM [dbo].[DeptEmplo] AS [DeptEmplo]</DefiningQuery>
+    </EntitySet>
+    <AssociationSet Name="FK_DepContacts_CorpusAddress" Association="Self.FK_DepContacts_CorpusAddress">
+      <End Role="Location" EntitySet="Location" />
+      <End Role="DepContacts" EntitySet="DepContacts" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,296 @@
+﻿@model IEnumerable<UGTUTelephone.UptodateDepartmentHistory1>
+
+@{
+    ViewBag.Title = "Найти записи";
+}
+
+<body>
+   
+    <script src="~/Scripts/jquery-2.2.0.min.js"></script>
+    <script src="~/Scripts/jquery-ui-1.11.4.min.js"></script>
+    <link href="~/Content/jquery-ui-1.10.4.custom.min.css" rel="stylesheet" />
+    <script>
+
+        $(function () {
+            $("#txtSearch").autocomplete({
+                source: function (request, response) {
+                    var param = $('#txtSearch').val();
+                    $.ajax({
+                        url: "Autocomplete",
+                        data: JSON.stringify({ 'term': param }),
+                        dataType: "json",
+                        type: "POST",
+                        contentType: "application/json; charset=utf-8",
+                        dataFilter: function (data) { return data; },
+                        success: function (data) {
+                            response($.map(data, function (item) {
+                                return { value: item };
+                            }))
+                        },
+                        error: function (XMLHttpRequest, textStatus, errorThrown) {
+                            alert(textStatus);
+                        }
+
+                    });
+                },
+                messages: { noResults: "No Result", results: "" }
+                //minLength: 2//minLength as 2, it means when ever user enter 2 character in TextBox the AutoComplete method will fire and get its source data.
+            });
+        });
+
+        //Authentic Code........
+
+        $(document).ready(function () {
+            //var url = "";
+            $("#dialog-alert").dialog({
+                autoOpen: false,
+                resizable: false,
+                height: 170,
+                width: 400,
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                },
+                buttons: {
+                    "OK": function () {
+                        $(this).dialog("close");
+
+                    }
+                    //"Cancel": function () {
+                    //    $(this).dialog("close");
+                    //}
+                }
+            });
+
+            @*if ('@TempData["msg"]' != "") {
+                $("#dialog-alert").dialog('open');
+            }*@
+
+            $("#dialog-edit").dialog({
+                //title: 'Create User',
+                autoOpen: false,
+                resizable: false,
+                width: 400,
+                show: { effect: 'drop', direction: "up" },
+                modal: true,
+                draggable: true,
+                open: function (event, ui) {
+                    $(".ui-dialog-titlebar-close").hide();
+                    $(this).load(url);
+                },
+                position: {
+                    my: 'center',
+                    at: 'center',
+                    //of: '#container'
+                }
+            });
+
+
+            $(".lnkEdit").on("click", function (e) {
+               // e.preventDefault(); //use this or return false;
+                url = $(this).attr('href');
+                $(".ui-dialog-title").html("обновление телефона");
+                $("#dialog-edit").dialog('open');
+
+                return false;
+            });
+
+            $(".lnkalert").on("click", function (e) {
+                // e.preventDefault(); //use this or return false;
+                url = $(this).attr('href');
+                $(".ui-dialog-title").html("обновление");
+                $("#dialog-alert").dialog('open');
+
+                return false;
+            });
+
+            $(document).on("click", "#btncancel", function (e) {
+                $("#dialog-edit").dialog("close");
+                return false;
+            });
+        });
+
+        
+      $(document).ready(function(){
+            $('[data-toggle="tooltip"]').tooltip();
+          });
+      $('div#loading').ajaxStart(function () {
+          $(this).fadeIn('fast');
+      }).ajaxStop(function () {
+          $(this).stop().fadeOut('fast');
+      });
+
+
+    </script>
+    <style>
+
+ .table-striped>tbody>tr:nth-child(odd)>td{ 
+/*.table-striped>tbody>tr:nth-child(odd)>th*/ 
+   background-color: #e0f2f1;
+ }
+.table > tbody > tr > td{
+    padding-left: 20px;
+} 
+.table > tbody > tr > th {
+
+    background-color: #86afb5;
+   
+}
+        #container {
+
+            color: black;
+    -moz-border-radius: 10px;
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+     background-color: white;
+  border-color: #0f5173;
+ 
+}
+div#loading 
+{
+    display: none;
+    width:100px;
+    height: 100px;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    text-align:center;
+    margin-left: -50px;
+    margin-top: -100px;
+    z-index:2;
+    overflow: auto;
+}  
+.tooltip {
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black;
+}
+
+.tooltip .title {
+    visibility: hidden;
+    width: 120px;
+    background-color: black;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px 0;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -60px;
+}
+
+.tooltip .title::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: black transparent transparent transparent;
+}
+
+.tooltip:hover .title {
+    visibility: visible;
+}
+
+    </style>
+</body>
+@*<h3>Найти записи</h3>*@
+
+<div id="dialog-alert" style="display: none">
+    
+</div>
+<div id="dialog-edit" style="display: none">
+    <div id="loading">
+        <img src="~/Content/themes/base/images/ajax-loader.gif" alt="Loading..."/>
+        @*<img src="/jobadmanager/Content/images/ajax-loader-big.gif" alt="Loading..."/>*@
+        @*<span class='glyphicon-left glyphicon glyphicon-refresh spinning'></span><h2>Loading...</h2>
+        <h3>Please wait a few seconds.</h3>*@
+        <h2>Loading...</h2>
+    </div>
+</div>
+<div id="dialog">
+
+</div>
+<div id="container">
+    @*<a href="#" data-toggle="tooltip" title="Hooray!">Hover over me</a>*@
+    <table class="table table-condensed table-striped">
+        <tr>
+            @*<th>
+                <b>индекс</b>
+            </th>*@
+            <th>
+                <b>Институт</b>
+            </th>
+            @*<th width="30px"></th>*@
+            @*<th>
+                <b>Телефон</b>  
+            </th>
+                
+            <th><b></b></th>*@
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+            <th></th>
+        </tr>
+
+        @foreach (var item in Model)
+        {
+            <tr>
+                @*<td width="20px"></td>*@
+                <td>
+                        @Html.DisplayFor(modelItem => item.DepartmentName)
+    </td>
+                    @*<td width="30px"></td>*@
+                <td>
+                    @if (item.IP_Phone != null)
+                        {
+                            <span class="glyphicon glyphicon-phone-alt tooltiptext" data-toggle="tooltip" title="@item.IP_Phone"></span>
+                        }
+                    @*@Html.ActionLink(modelItem => item.DepPhoneNumber, "Edit", new { id = item.id }, new { @class = "lnkEdit" })*@
+                    @*@Html.DisplayFor(modelItem => item.Phone)*@ 
+                </td>
+                <td>
+                    @if(item.Phone != null)
+                    {
+                        <span class="glyphicon glyphicon-earphone" data-toggle="tooltip" title="@item.Phone"></span>
+                    }
+                </td>
+
+                <td>
+                    @if (item.Email != null)
+                    {
+                        <span class="glyphicon glyphicon-envelope" data-toggle="tooltip" title="@item.Email"></span>
+                    }
+                
+                </td> 
+                
+                <td>
+                    @if (item.Address != null)
+                    {
+                        <span class="glyphicon glyphicon-home" data-toggle="tooltip" title="@item.Address"></span>
+                    }
+                    
+                </td>
+                @if (Session["Privilige"] != null)
+                {
+                    <td>
+                        <a href="Edit/@item.id" class="lnkEdit">
+                            <span class="glyphicon glyphicon-pencil"></span>
+                        </a>
+                        @*<span class="glyphicon glyphicon-pencil">@Html.ActionLink("Изменить","Edit", new { id = item.id }, new { @class = "lnkEdit" })</span>*@
+                        
+                    </td>                   
+                    }
+            </tr>
+        }
+
+    </table>
+    </div> 
